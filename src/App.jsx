@@ -7,7 +7,7 @@ import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
 import Protected from './pages/Protected';
 import SignupPage from './pages/SignupPage';
-//prueba
+import Cards from './components/Cards'
 
 function App() {
   return (
@@ -39,6 +39,7 @@ function App() {
             </IsAnon>
           }
         />
+        <Route path='/cards' element={< Cards />}/>
         <Route path="*" element={<div>404 Not Found</div>} />
       </Routes>
     </AuthProviderWrapper>
