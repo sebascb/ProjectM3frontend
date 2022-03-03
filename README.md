@@ -1,49 +1,77 @@
-# My project's name
+# Project's name
 
-​
+*Ironhack-server-Project-M3*
+*Pokkemon App*
+*Version JS Platinum*
 
-## App description & purpose
+## Description 
 
-​
-With this app the user can...
-​
-It is part of my final project for the Ironhack web dev bootcamp, a MERN fullstack application.
-​
+A pokemon searching cards app where people can create Pokemon cards and collect your favorites ones and show them in your profile.
 
-## Backend connection
+## User Actions
 
-​
-It is the frontend repository and it is connected to [this backend](http://link-to-my-backend-repo.org/).
+- 404: As a user I can see a 404 page if I try to reach a page that does not exist so that I know it's my fault
 
-## .env
+- Sign up: As an user I can sign up in the platform.
 
-you have to setup `.env` example in `.env.sample`
-​
+- Login: As a user I can login to the platform and go to my profile/dashboard.
 
-## Install the app
+- Logout: As a user I can logout from the platform so no one else can use it
 
-​
+- Edit profiles As a user I can edit my profile.
 
+## Requirements
+### Authentication
+
+- auth.login(user)
+- auth.signup(user)
+- auth.logout()
+
+### Models
+```js
+User model
+
+{
+    userName: String,
+    email: String,
+    hashedPassword: String,
+}
+
+Card Poke model
+
+{
+	cardID: Number,
+	image: String,
+	name: String ,
+	element: String,
+	description: String,
+	attack: Number,
+	HP: Number,
+	ability: String,
+}
 ```
-$ npm install
-```
 
-​
+## Routes
 
-## Start & watch
 
-```
-$ npm start
-```
+|            |                                     |                                                              |                |              |                        |
+| ---------- | ----------------------------------- | ------------------------------------------------------------ | -------------- | ------------ | ---------------------- |
+| **Method** | **Route**                           | **Description**                                              | Success status | Error status | Request - Body         |
+| `GET`      | `/`                                 | Main Pokemon page route.                                     |                |              |                        |
+| `GET`      | `auth/login`                        | Renders `login` form view.                                   |                |              |                        |
+| `POST`     | `auth//login`                       | Sends Login form data to the server.                         | 200            | 401          | { email, password }    |
+| `GET`      | `auth/signup`                       | Renders `signup` options.                                    | 201            | 404          |                        |
+| `GET`      | `auth/signup-user`                  | Renders `signup` form view for user.                         | 201            | 404          |                        |
+| `POST`     | `auth/signup-user`                  | Sends Sign Up info to the server and creates user in the DB  | 201            | 404          | { email, password }    |     
+| `GET`      | `/private/userprofile`              | Shows user profile details with cards                        |                |              |                        |
+| `GET`      | `/private/edit-userprofile`         | Private route. Shows`edit-profile user` form                 |                |              |                        |
+<br>
 
-## Simple build for production
-
-```
-$ npm run build
-```
+## Backlog
+-  Social Network
+-  Meeting point trough the map view
 
 ## Links
 
-- [Slides]()
-- [Backend repository]()
-- [Deployed version]()
+
+# Deploy
