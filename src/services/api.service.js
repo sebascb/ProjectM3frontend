@@ -31,11 +31,16 @@ class ApiService {
     // return axios.post("http://localhost:5005/auth/singup");
   };
 
+
   verify = () => {
     return this.api.get('/auth/verify');
     // same as
     // return axios.post("http://localhost:5005/auth/verify");
   };
+
+  getCards = () => {
+    return this.api.get('/cards');
+  }
 }
 
 // Create one instance (object) of the service

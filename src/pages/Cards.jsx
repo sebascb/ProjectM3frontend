@@ -1,17 +1,16 @@
 import React from "react";
-import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import cardsJSON from "../cards-data.json";
-
+import apiService
+ from "../services/api.service";
 function Cards () {
-  const [cards, setCards] = useState(cardsJSON);
-  const apiURL = "https://cranky-lewin-d3d1ec.netlify.app/cards";
+  const [cards, setCards] = useState([]);
+ // const apiURL = "https://cranky-lewin-d3d1ec.netlify.app/cards";
 
   useEffect(() => {
-    axios.get(apiURL).then((response) => {
-      console.log("response.data", response.data);
-      setCards(response.data);
+    apiService.getCards().then((response) => {
+      console.log("response.data", response.data.card);
+      setCards(response.data.card);
     })
     .catch((error) => console.log(error))
   }, []);
@@ -20,7 +19,7 @@ function Cards () {
         <div>
           <div>
             {cards.map(card => (
-              <div key="card._id">
+              <div key={card._id}>
                 <Link
                   to={`/cards/${card._id}`}>
                   <div>
