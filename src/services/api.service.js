@@ -41,6 +41,10 @@ class ApiService {
   getCards = () => {
     return this.api.get('/cards');
   }
+
+  create = () => {
+    return this.api.post('/cards/create');
+  }
 }
 
 // Create one instance (object) of the service

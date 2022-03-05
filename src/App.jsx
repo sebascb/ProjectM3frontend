@@ -8,6 +8,7 @@ import LoginPage from './pages/LoginPage';
 import Protected from './pages/Protected';
 import SignupPage from './pages/SignupPage';
 import Cards from './pages/Cards'
+import Create from './components/Create';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           }
         />
         <Route path='/cards' element={< Cards />}/>
+        <Route path="/cards/create" element={<Create />} />
         <Route path="*" element={<div>404 Not Found</div>} />
       </Routes>
     </AuthProviderWrapper>
