@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import apiService
- from "../services/api.service";
+import apiService from "../services/api.service";
+
 function Cards () {
   const [cards, setCards] = useState([]);
  // const apiURL = "https://cranky-lewin-d3d1ec.netlify.app/cards";
