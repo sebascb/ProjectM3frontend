@@ -7,7 +7,7 @@ import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
 import Protected from './pages/Protected';
 import SignupPage from './pages/SignupPage';
-import Cards from './components/Cards'
+import Cards from './pages/Cards'
 
 function App() {
   return (
