@@ -26,7 +26,7 @@ function Create () {
 
    const handleSubmit = e => {
         e.preventDefault();
-        apiService.create().then(() => {
+        apiService.create(newCard).then(() => {
                 navigate('/cards')
             })
             .catch(error => {

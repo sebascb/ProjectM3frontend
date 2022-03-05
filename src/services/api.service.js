@@ -42,8 +42,8 @@ class ApiService {
     return this.api.get('/cards');
   }
 
-  create = () => {
-    return this.api.post('/cards/create');
+  create = (body) => {
+    return this.api.post('/cards', body);
   }
 }
 
