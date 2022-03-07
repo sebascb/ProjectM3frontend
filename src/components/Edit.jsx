@@ -1,10 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import apiService from "../services/api.service";
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom";
 
 function Edit () {
-  const [editCard, setEditCard] = useState({
+  const [editStateCard, setEditStateCard] = useState({
       image: "",
       name: "",
       element: "",
@@ -13,20 +13,19 @@ function Edit () {
       hp: 0,
       ability: "",
     });
-
     const { id } = useParams();
+    const navigate = useNavigate(); 
 
     useEffect(() => {
-      apiService.edit(editCard)(`{params.id}`).then((response) => {
+      apiService.edit(editStateCard).then((response) => {
           console.log("response.data", response.data);
-          setEditCard(response.data);
+          setEditStateCard(response.data);
         })
         .catch((error)=>console.log(error))
-    }, [params.id]);
+    }, []);
    
-   const navigate = useNavigate(); 
    const handleForm = e => {
-        setEditCard(previous => {
+        setEditStateCard(previous => {
             return {
               ...previous,
               [e.target.name]: e.target.value,
@@ -36,7 +35,7 @@ function Edit () {
 
    const handleSubmit = e => {
         e.preventDefault();
-        apiService.edit(editCard).then(() => {
+        apiService.edit(editStateCard).then(() => {
                 navigate('/cards')
             })
             .catch(error => {
@@ -53,49 +52,49 @@ function Edit () {
             <input
               type="text"
               name="image"
-              value={edit.image}
+              value={editStateCard.image}
               onChange={handleForm}
             />
             <label>Name</label>
             <input
               type="text"
               name="name"
-              value={edit.name}
+              value={editStateCard.name}
               onChange={handleForm}
             />
             <label>Element</label>
             <input
               type="text"
               name="element"
-              value={edit.element}
+              value={editStateCard.element}
               onChange={handleForm}
             />
             <label>Description</label>
             <input
               type="text"
               name="description"
-              value={edit.description}
+              value={editStateCard.description}
               onChange={handleForm}
             />
             <label>Attack</label>
             <input
               type="text"
               name="attack"
-              value={edit.attack}
+              value={editStateCard.attack}
               onChange={handleForm}
             />
             <label>HP</label>
             <input
               type="number"
               name="hp"
-              value={edit.hp}
+              value={editStateCard.hp}
               onChange={handleForm}
             />
             <label>Ability</label>
             <input
               type="text"
               name="ability"
-              value={edit.ability}
+              value={editStateCard.ability}
               onChange={handleForm}
             />
             <button type="submit">Edit</button>

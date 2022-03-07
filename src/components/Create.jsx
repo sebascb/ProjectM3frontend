@@ -13,8 +13,8 @@ function Create () {
       hp: 0,
       ability: "",
     });
-   
    const navigate = useNavigate(); 
+   
    const handleForm = e => {
         setNewCard(previous => {
             return {

@@ -42,12 +42,16 @@ class ApiService {
     return this.api.get('/cards');
   }
 
+  getDetail = (id) => {
+    return this.api.get(`/cards/${id}/detail`);
+  };
+
   create = (body) => {
     return this.api.post('/cards', body);
   }
 
   edit = (body, id) => {
-    return this.api.put(`/cards/{id}/edit`, body);
+    return this.api.put(`/cards/${id}/edit`, body);
   }
 }
 
