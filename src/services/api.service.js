@@ -46,8 +46,8 @@ class ApiService {
     return this.api.post('/cards', body);
   }
 
-  edit = (body) => {
-    return this.api.put('/cards/{id}/edit', body);
+  edit = (body, id) => {
+    return this.api.put(`/cards/{id}/edit`, body);
   }
 }
 

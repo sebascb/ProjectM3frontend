@@ -14,6 +14,8 @@ function Edit () {
       ability: "",
     });
 
+    const { id } = useParams();
+
     useEffect(() => {
       apiService.edit(editCard)(`{params.id}`).then((response) => {
           console.log("response.data", response.data);
@@ -51,57 +53,56 @@ function Edit () {
             <input
               type="text"
               name="image"
-              value={card.image}
+              value={edit.image}
               onChange={handleForm}
             />
             <label>Name</label>
             <input
               type="text"
               name="name"
-              value={card.name}
+              value={edit.name}
               onChange={handleForm}
             />
             <label>Element</label>
             <input
               type="text"
               name="element"
-              value={card.element}
+              value={edit.element}
               onChange={handleForm}
             />
             <label>Description</label>
             <input
               type="text"
               name="description"
-              value={card.description}
+              value={edit.description}
               onChange={handleForm}
             />
             <label>Attack</label>
             <input
               type="text"
               name="attack"
-              value={card.attack}
+              value={edit.attack}
               onChange={handleForm}
             />
             <label>HP</label>
             <input
               type="number"
               name="hp"
-              value={card.hp}
+              value={edit.hp}
               onChange={handleForm}
             />
             <label>Ability</label>
             <input
               type="text"
               name="ability"
-              value={card.ability}
+              value={edit.ability}
               onChange={handleForm}
             />
             <button type="submit">Edit</button>
           </form>
         </div>
       </div>
-    );    
-
+   );    
 }
 
 export default Edit;
