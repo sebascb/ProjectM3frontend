@@ -5,19 +5,21 @@ import apiService from "../services/api.service";
 
 function Detail () {
   const [detailCard, setDetailCard] = useState({});
-  const [userPost, setUserPost] = useState({});
-  const { id } = useParams();
+  const [userCard, setUserCard] = useState({});
+  const { cardId } = useParams();
 
    useEffect(() => {
-    apiService.getDetail(id).then(response => {
+    apiService.getDetail(cardId).then(response => {
         setDetailCard(response.data);
          const { user } = response.data;
-        setUserPost(user);
+         setUserCard(user);
+         const oneCardData = response.data;
+         setDetailCard(oneCardData);
       })
       .catch(error => {
         console.log(error);
       });
-  }, []);
+  }, [cardId]);
 
    return (
               <div>
@@ -25,12 +27,12 @@ function Detail () {
                     <img src={detailCard.image} style={{ width: '200px'}} alt={detailCard.name} />
                   </div>
                   <div>
-                    <h1>{userPost.name}</h1>
-                    <h1>{detailCard.element}</h1>
-                    <h1>{detailCard.decription}</h1>
-                    <h1>{detailCard.attack}</h1>
-                    <h1>{detailCard.hp}</h1>
-                    <h1>{detailCard.ability}</h1>
+                    <p>{userCard.name}</p>
+                    <p>{detailCard.element}</p>
+                    <p>{detailCard.decription}</p>
+                    <p>{detailCard.attack}</p>
+                    <p>{detailCard.hp}</p>
+                    <p>{detailCard.ability}</p>
                   </div>
               </div>
       );
