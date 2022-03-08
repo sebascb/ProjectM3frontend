@@ -55,7 +55,7 @@ class ApiService {
   }
 
   delete = (id) => {
-    return this.api.delete(`/card/${id}/delete`);
+    return this.api.delete(`/cards/${id}/delete`);
   };
 }
 
