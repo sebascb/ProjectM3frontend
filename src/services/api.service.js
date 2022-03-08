@@ -43,7 +43,7 @@ class ApiService {
   }
 
   getDetail = (id) => {
-    return this.api.get(`/cards/${id}/detail`);
+    return this.api.get(`/cards/${id}`);
   };
 
   create = (body) => {
@@ -54,8 +54,8 @@ class ApiService {
     return this.api.put(`/cards/${id}/edit`, body);
   }
 
-  delete = (id) => {
-    return this.api.delete(`/cards/${id}/delete`);
+  delete = (body, id) => {
+    return this.api.delete(`/cards/${id}/delete`, body);
   };
 }
 

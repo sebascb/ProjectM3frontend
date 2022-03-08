@@ -13,11 +13,11 @@ function Edit () {
       hp: 0,
       ability: "",
     });
-    const { id } = useParams();
+    const { cardId } = useParams();
     const navigate = useNavigate(); 
 
     useEffect(() => {
-      apiService.edit(editStateCard).then((response) => {
+      apiService.getDetail(cardId).then((response) => {
           console.log("response.data", response.data);
           setEditStateCard(response.data);
         })
@@ -35,7 +35,7 @@ function Edit () {
 
    const handleSubmit = e => {
         e.preventDefault();
-        apiService.edit(editStateCard).then(() => {
+        apiService.edit(editStateCard, cardId).then(() => {
                 navigate('/cards')
             })
             .catch(error => {
