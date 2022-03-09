@@ -1,23 +1,23 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import apiService from "../services/api.service";
-import { useNavigate, useParams, Link} from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 function Delete () {
   const [deleteStateCard, setDeleteCard] = useState({});
-  const { id } = useParams();
-  const navigate = useNavigate(); 
+  const { cardId } = useParams();
+  const navigate = useNavigate();
 
     useEffect(() => {
-      apiService.getDetail(id).then((response) => {
+      apiService.getDetail(cardId).then((response) => {
           console.log("response.data", response.data);
           setDeleteCard(response.data);
         })
-        .catch((error)=>console.log(error))
+        .catch(error=>console.log(error))
     }, []);
    
-   const handleDelete = () => {
-        apiService.deleteStateCard(id).then(() => {
+  const handleDelete = () => {
+        apiService.delete(cardId).then(() => {
           navigate('/cards');
       })
       .catch(error => {
@@ -26,30 +26,22 @@ function Delete () {
   };
 
    return (
-      <div>
+    <>
+      <div> 
+        <button onClick={handleDelete}>borrar hostia</button>
         <div>
-          <h1>Delete card</h1>
           <div>
-                  <div>
-                    <img src={deleteStateCard.image} style={{ width: '200px'}} alt={deleteStateCard.name} />
-                  </div>
-                  <div>
-                    <p>{deleteStateCard.element}</p>
-                    <p>{deleteStateCard.description}</p>
-                    <p>{deleteStateCard.attack}</p>
-                    <p>{deleteStateCard.hp}</p>
-                    <p>{deleteStateCard.ability}</p>
-                  </div>
-              </div>
-          <div>
-          <button onClick={handleDelete}>
-          </button>
-          <Link to={`/cards`}>
-          </Link>
+            <p>{deleteStateCard.image}</p>
           </div>
+          <p>{deleteStateCard.name}</p>
+          <p>{deleteStateCard.element}</p>
+          <p>{deleteStateCard.description}</p>
+          <p>{deleteStateCard.attack}</p>
+          <p>{deleteStateCard.hp}</p>
+          <p>{deleteStateCard.ability}</p>
         </div>
       </div>
-   );    
+    </>
+  );
 }
-
 export default Delete;
