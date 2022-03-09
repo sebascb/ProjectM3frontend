@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <nav>
       <Link to="/">
-        <button>Navbar</button>
+        <button>Home</button>
       </Link>
 
       {isLoggedIn && (
@@ -18,7 +18,12 @@ function Navbar() {
           <Link to="/protected">
             <button>Protected</button>
           </Link>
-
+          <Link to="/cards">
+            <button>Cards</button>
+          </Link>
+          <Link to="/cards/create">
+            <button>Create</button>
+          </Link>
           <button onClick={logOutUser}>Logout</button>
           <span>{user && user.name}</span>
         </>

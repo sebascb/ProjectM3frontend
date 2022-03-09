@@ -28,18 +28,7 @@ function Delete () {
    return (
     <>
       <div> 
-        <button onClick={handleDelete}>borrar hostia</button>
-        <div>
-          <div>
-            <p>{deleteStateCard.image}</p>
-          </div>
-          <p>{deleteStateCard.name}</p>
-          <p>{deleteStateCard.element}</p>
-          <p>{deleteStateCard.description}</p>
-          <p>{deleteStateCard.attack}</p>
-          <p>{deleteStateCard.hp}</p>
-          <p>{deleteStateCard.ability}</p>
-        </div>
+        <button onClick={handleDelete}>borrar hostia</button><p>{deleteStateCard.name}?</p>
       </div>
     </>
   );
