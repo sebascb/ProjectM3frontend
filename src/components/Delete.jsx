@@ -4,20 +4,12 @@ import apiService from "../services/api.service";
 import { useNavigate, useParams, Link} from "react-router-dom";
 
 function Delete () {
-  const [deleteStateCard, setDeleteCard] = useState({
-      image: "",
-      name: "",
-      element: "",
-      description: "",
-      attack: 0,
-      hp: 0,
-      ability: "",
-    });
-    const { cardId } = useParams();
-    const navigate = useNavigate(); 
+  const [deleteStateCard, setDeleteCard] = useState({});
+  const { id } = useParams();
+  const navigate = useNavigate(); 
 
     useEffect(() => {
-      apiService.getDetail(deleteStateCard).then((response) => {
+      apiService.getDetail(id).then((response) => {
           console.log("response.data", response.data);
           setDeleteCard(response.data);
         })
@@ -25,7 +17,7 @@ function Delete () {
     }, []);
    
    const handleDelete = () => {
-        apiService.deleteStateCard(cardId).then(() => {
+        apiService.deleteStateCard(id).then(() => {
           navigate('/cards');
       })
       .catch(error => {
@@ -43,7 +35,7 @@ function Delete () {
                   </div>
                   <div>
                     <p>{deleteStateCard.element}</p>
-                    <p>{deleteStateCard.decription}</p>
+                    <p>{deleteStateCard.description}</p>
                     <p>{deleteStateCard.attack}</p>
                     <p>{deleteStateCard.hp}</p>
                     <p>{deleteStateCard.ability}</p>

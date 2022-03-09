@@ -54,8 +54,8 @@ class ApiService {
     return this.api.put(`/cards/${id}/edit`, body);
   }
 
-  delete = (body, id) => {
-    return this.api.delete(`/cards/${id}/delete`, body);
+  delete = (id) => {
+    return this.api.delete(`/cards/${id}/delete`);
   };
 }
 
