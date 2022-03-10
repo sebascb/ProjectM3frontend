@@ -57,6 +57,10 @@ class ApiService {
   delete = (id) => {
     return this.api.delete(`/cards/${id}/delete`);
   };
+
+  // favorite = (id) => {
+  //   return this.api.favorite(`/cards/${id}/favorite`);
+  // }
 }
 
 // Create one instance (object) of the service

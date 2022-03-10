@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams, Link} from 'react-router-dom';
 import apiService from "../services/api.service";
 import Delete from "../components/Delete";
+// import AddFavorite from "../components/AddFavorite";
 
 function Detail () {
   const [detailCard, setDetailCard] = useState({});
@@ -21,6 +22,7 @@ function Detail () {
 
    return (
               <div>
+                <p>{detailCard.name}</p>
                   <div>
                     <img src={detailCard.image} style={{ width: '200px'}} alt={detailCard.name} />
                   </div>
@@ -32,6 +34,7 @@ function Detail () {
                     <p>{detailCard.ability}</p>
                     <Link to={`/cards/${cardId}/edit`}>Edit</Link>
                     <Delete />
+                    {/* <AddFavorite /> */}
                   </div>
               </div>
       );
