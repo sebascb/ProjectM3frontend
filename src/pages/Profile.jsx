@@ -22,7 +22,17 @@ function Profile () {
 
    return (
               <div>
-               <h2>Profile</h2> 
+               {/* <h2>Profile</h2> 
+                <p>{favoriteCard.name}</p>
+                  <div>
+                    <img src={favoriteCard.image} style={{ width: '200px'}} alt={favoriteCard.name} />
+                  </div>
+                  <div>
+                    <p>{favoriteCard.element}</p>
+                    <p>{favoriteCard.decription}</p>
+                    <p>{favoriteCard.attack}</p>
+                    <p>{favoriteCard.hp}</p>
+                    <p>{favoriteCard.ability}</p> */}
                <p>{userProfile.name}</p>
                <p>{user.name}</p>
                <p>{user.email}</p>

@@ -19,35 +19,22 @@ class ApiService {
     });
   }
 
-  login = requestBody => {
-    return this.api.post('/auth/login', requestBody);
-    // same as
-    // return axios.post("http://localhost:5005/auth/login");
-  };
-
   signup = requestBody => {
     return this.api.post('/auth/signup', requestBody);
     // same as
     // return axios.post("http://localhost:5005/auth/singup");
   };
 
+  login = requestBody => {
+    return this.api.post('/auth/login', requestBody);
+    // same as
+    // return axios.post("http://localhost:5005/auth/login");
+  };
 
   verify = () => {
     return this.api.get('/auth/verify');
     // same as
     // return axios.post("http://localhost:5005/auth/verify");
-  };
-
-  getCards = () => {
-    return this.api.get('/cards');
-  }
-
-  getDetail = (id) => {
-    return this.api.get(`/cards/${id}`);
-  };
-
-   getProfile = (id) => {
-    return this.api.get(`/profile/${id}`);
   };
 
   create = (body) => {
@@ -62,9 +49,29 @@ class ApiService {
     return this.api.delete(`/cards/${id}/delete`);
   };
 
-  favorite = (id) => {
-    return this.api.favorite(`/cards/${id}/favorite`);
+  getCards = () => {
+    return this.api.get('/cards');
   }
+
+  getDetail = (id) => {
+    return this.api.get(`/cards/${id}`);
+  };
+
+  favorite = (id) => {
+    return this.api.post(`/cards/${id}/favorite`);
+  }
+
+  getFavorite = (id) => {
+    return this.api.get(`/cards/${id}/favorite`);
+  };
+
+  deleteFavorite = (id) => {
+    return this.api.delete(`/cards/${id}/favorite`);
+  }
+
+  getProfile = (id) => {
+    return this.api.get(`/profile/${id}`);
+  };
 }
 
 // Create one instance (object) of the service

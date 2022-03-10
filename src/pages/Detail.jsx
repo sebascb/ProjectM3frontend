@@ -1,24 +1,64 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useParams, Link} from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import apiService from "../services/api.service";
-import Delete from "../components/Delete";
-import AddFavorite from "../components/AddFavorite";
 
 function Detail () {
   const [detailCard, setDetailCard] = useState({});
+  const [favorite, setFavorite] = useState(false);
   const { cardId } = useParams();
+  const navigate = useNavigate();
+
+  const getCardDetail = async () => {
+    try {
+      const response = await apiService.getDetail(cardId);
+      setDetailCard(response.data)
+    }catch(error){
+      console.log(error)
+    }
+  };
+
+  const checkIfFavorite = async () => {
+    try {
+      const response = await apiService.getFavorite(cardId);
+      setFavorite(response.data)
+    }catch(error){
+      console.log(error)
+    }
+  };
 
    useEffect(() => {
-    apiService.getDetail(cardId).then(response => {
-        setDetailCard(response.data);
-        //  const oneCardData = response.data;
-        //  setDetailCard(oneCardData);
+    getCardDetail();
+  }, []);
+
+  const handleDelete = () => {
+        apiService.delete(cardId).then(() => {
+          navigate('/cards');
       })
       .catch(error => {
         console.log(error);
       });
-  }, [cardId]);
+  };
+
+  const handleFavorite = e => {
+        e.preventDefault();
+        apiService.favorite(cardId).then(() => {
+                navigate('/profile');
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
+
+    const handleUnfavorite = e => {
+        e.preventDefault();
+        apiService.favorite(cardId).then(() => {
+                navigate('/cards');
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
 
    return (
               <div>
@@ -33,8 +73,9 @@ function Detail () {
                     <p>{detailCard.hp}</p>
                     <p>{detailCard.ability}</p>
                     <Link to={`/cards/${cardId}/edit`}>Edit</Link>
-                    <Delete />
-                    <AddFavorite />
+                    <button onClick={handleDelete}>Delete</button>
+                    {favorite ? <button onClick={handleUnfavorite}>Unfavorite</button> : <button onClick={handleFavorite}>Favorite</button>}
+                     <button onClick={checkIfFavorite}>Checkiffav</button>
                   </div>
               </div>
       );
