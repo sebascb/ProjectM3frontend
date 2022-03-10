@@ -1,11 +1,13 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useParams} from 'react-router-dom';
+import { AuthContext } from './../context/auth.context';
 import apiService from "../services/api.service";
 
 function Profile () {
-  const [user, setProfileUser] = useState([]);
+  const [userProfile, setProfileUser] = useState([]);
   const { userId } = useParams();
+  const { user } = useContext(AuthContext);
 
   useEffect(() => {
     apiService
@@ -20,7 +22,8 @@ function Profile () {
 
    return (
               <div>
-               <h2>Profile</h2>
+               <h2>Profile</h2> 
+               <p>{userProfile.name}</p>
                <p>{user.name}</p>
                <p>{user.email}</p>
               </div>
