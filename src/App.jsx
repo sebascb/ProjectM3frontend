@@ -50,6 +50,7 @@ function App() {
         <Route path="/cards/:cardId/delete" element={<Delete />} />
         <Route path="*" element={<div>404 Not Found</div>} />
       </Routes>
+      <Navbar />
     </AuthProviderWrapper>
   );
 }
