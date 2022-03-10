@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams, Link} from 'react-router-dom';
 import apiService from "../services/api.service";
 import Delete from "../components/Delete";
-// import AddFavorite from "../components/AddFavorite";
+import AddFavorite from "../components/AddFavorite";
 
 function Detail () {
   const [detailCard, setDetailCard] = useState({});
@@ -34,7 +34,7 @@ function Detail () {
                     <p>{detailCard.ability}</p>
                     <Link to={`/cards/${cardId}/edit`}>Edit</Link>
                     <Delete />
-                    {/* <AddFavorite /> */}
+                    <AddFavorite />
                   </div>
               </div>
       );
