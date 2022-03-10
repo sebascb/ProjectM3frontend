@@ -1,7 +1,7 @@
 function Home() {
   return (
     <div>
-      <h1>HomeCARDS</h1>
+      <h1>IMAGEN TOCHA</h1>
     </div>
   );
 }

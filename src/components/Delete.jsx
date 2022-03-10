@@ -28,7 +28,7 @@ function Delete () {
    return (
     <>
       <div> 
-        <button onClick={handleDelete}>borrar hostia</button><p>{deleteStateCard.name}?</p>
+        <button onClick={handleDelete}>borrar hostia {deleteStateCard.name}?</button>
       </div>
     </>
   );
