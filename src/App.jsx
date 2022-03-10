@@ -13,6 +13,7 @@ import Protected from './pages/Protected';
 import SignupPage from './pages/SignupPage';
 import Cards from './pages/Cards';
 import Detail from './pages/Detail';
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
         <Route path="/cards/:cardId/edit" element={<Edit />} />
         <Route path="/cards/:cardId/delete" element={<Delete />} />
         {/* <Route path="/cards/:cardId/favorite" element={<AddFavorite />} /> */}
+        <Route path='/profile' element={< Profile />}/>
         <Route path="*" element={<div>404 Not Found</div>} />
       </Routes>
       <Navbar />

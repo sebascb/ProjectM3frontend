@@ -14,7 +14,7 @@ function Delete () {
           setDeleteCard(response.data);
         })
         .catch(error=>console.log(error))
-    }, []);
+    }, [cardId]);
    
   const handleDelete = () => {
         apiService.delete(cardId).then(() => {

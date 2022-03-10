@@ -24,6 +24,9 @@ function Navbar() {
           <Link to="/cards/create">
             <button>Create</button>
           </Link>
+          <Link to="/profile">
+            <button>Profile</button>
+          </Link>
           <button onClick={logOutUser}>Logout</button>
           <span>{user && user.name}</span>
         </>

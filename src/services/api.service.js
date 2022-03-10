@@ -46,6 +46,10 @@ class ApiService {
     return this.api.get(`/cards/${id}`);
   };
 
+   getProfile = (id) => {
+    return this.api.get(`/profile/${id}`);
+  };
+
   create = (body) => {
     return this.api.post('/cards', body);
   }
