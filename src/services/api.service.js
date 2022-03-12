@@ -69,9 +69,13 @@ class ApiService {
     return this.api.delete(`/cards/${id}/favorite`);
   }
 
-  getProfile = (id) => {
-    return this.api.get(`/profile/${id}`);
+  getProfile = () => {
+    return this.api.get(`/fav`);
   };
+
+  getMe = () => {
+    return this.api.get('/auth/me');
+  }
 }
 
 // Create one instance (object) of the service
