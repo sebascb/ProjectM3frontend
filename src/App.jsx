@@ -1,3 +1,4 @@
+import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import IsAnon from './components/IsAnon';
 import IsPrivate from './components/IsPrivate';
