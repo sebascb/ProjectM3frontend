@@ -39,21 +39,19 @@ const getCardFavorite = async () => {
    return (
            <div>
               <h2>Profile</h2> 
-              {showFavs.map(fav => <div key={fav._id}>{fav.card.name}</div>)}
-               <p>{showFavs.name}</p>
+              {showFavs.map(fav => <div key={fav._id}>
+              <h3>{fav.name}</h3>
                  <div>
-                   <img src={showFavs.image} style={{ width: '200px'}} alt={showFavs.name} />
+                   <img src={fav.image} style={{ width: '200px'}} alt={fav.name} />
                  </div>
-                 <div>
-                   <p>{showFavs.element}</p>
-                   <p>{showFavs.decription}</p>
-                   <p>{showFavs.attack}</p>
-                   <p>{showFavs.hp}</p>
-                   <p>{showFavs.ability}</p>
-                   </div>
+                   <p>{fav.element}</p>
+                   <p>{fav.description}</p>
+                   <p>{fav.attack}</p>
+                   <p>{fav.hp}</p>
+                   <p>{fav.ability}</p>
+              </div>)}
                <p>{user.name}</p>
                <p>{user.email}</p>
-                <p>{user.card}</p>
               </div>
       );
   }
