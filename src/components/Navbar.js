@@ -8,7 +8,7 @@ function Navbar() {
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
   return (
-    <nav>
+    <nav className='nav-bar'>
       <Link to="/">
         <button>Home</button>
       </Link>

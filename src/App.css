@@ -336,7 +336,16 @@ h2 {
 
 /*Nav bar*/
 .nav-bar {
- margin-top: 0.7rem;
+  margin-top: 0.5rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  gap: 0.1rem;
+  text-decoration: none;
+  color: #1192e7;
+  padding: 0px 10px;
+  background-color: rgb(255, 255, 255);
 }
 
 .nav-bar-ul {
