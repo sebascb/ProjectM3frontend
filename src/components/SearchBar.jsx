@@ -35,7 +35,7 @@ function SearchBar() {
 
   return (
     <div>
-      <input type="search" name="name" value={input} onChange={handleBar} placeholder="search" />
+      <input type="text" name="name" value={input} onChange={handleBar} placeholder="search" />
       <div>
         {/* {cards.map(card => (
           <div key={card._id} >

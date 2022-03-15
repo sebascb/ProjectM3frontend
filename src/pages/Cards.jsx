@@ -25,7 +25,9 @@ function Cards () {
             <SearchBar />
           </div>
           <div className="button-main-top">
-            <button className="button-create-top">Create Card</button>
+            <Link to="/cards/create">
+              <button className="button-create-top">Create Card</button>
+            </Link>
           </div>
           <div className="contImage">
             {cards.map(card => (
