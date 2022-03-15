@@ -4,7 +4,7 @@ import { useState, useEffect, useContext } from "react";
 import { AuthContext } from './../context/auth.context';
 import apiService from "../services/api.service";
 
-function Profile () {
+function Profile() {
   //const [userProfile, setProfileUser] = useState([]);
   const [showFavs, setShowFavs] = useState([]);
   //const { userId } = useParams();
@@ -22,38 +22,43 @@ function Profile () {
   //     });
   // }, [userId]);
 
-const getCardFavorite = async () => {
+  const getCardFavorite = async () => {
     try {
       const response = await apiService.getProfile();
       setShowFavs(response.data)
-      console.log(response.data);
-    }catch(error){
+      console.log(showFavs);
+    } catch (error) {
       console.log(error)
     }
   };
-  
+
   useEffect(() => {
     getCardFavorite()
   }, []);
 
-   return (
-           <div>
-              <h2>Profile</h2> 
-              {showFavs.map(fav => <div key={fav._id}>
-              <h3>{fav.name}</h3>
-                 <div>
-                   <img src={fav.image} style={{ width: '200px'}} alt={fav.name} />
-                 </div>
-                   <p>{fav.element}</p>
-                   <p>{fav.description}</p>
-                   <p>{fav.attack}</p>
-                   <p>{fav.hp}</p>
-                   <p>{fav.ability}</p>
-              </div>)}
-               <p>{user.name}</p>
-               <p>{user.email}</p>
-              </div>
-      );
-  }
+  return (
+    <div>
+      <h2>Profile</h2>
+      {showFavs.map(fav => {
+        return (
+          <div key={fav.card._id}>
+            <h3>{fav.card.name}</h3>
+            <div>
+              <img src={fav.card.image} style={{ width: '200px' }} alt={fav.card.name} />
+            </div>
+            <p>{fav.card.element}</p>
+            <p>{fav.card.description}</p>
+            <p>{fav.card.attack}</p>
+            <p>{fav.card.hp}</p>
+            <p>{fav.card.ability}</p>
+          </div>
+        )
+      })
+      }
+      <p>{user.name}</p>
+      <p>{user.email}</p>
+    </div>
+  );
+}
 
 export default Profile;

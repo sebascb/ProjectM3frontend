@@ -58,11 +58,11 @@ class ApiService {
   };
 
   favorite = (id) => {
-    return this.api.post(`/cards/${id}/favorite`);
+    return this.api.post(`/fav/${id}/favorite`);
   }
 
   getFavorite = (id) => {
-    return this.api.get(`/cards/${id}/favorite`);
+    return this.api.get(`/fav/${id}/favorite`);
   };
 
   deleteFavorite = (id) => {
