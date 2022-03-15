@@ -21,7 +21,7 @@ function Cards () {
           <div className="title-card">
             <h2 className="letter-card">Pokemon Cards</h2>
           </div>
-          <div> 
+          <div className="searchBar"> 
             <SearchBar />
           </div>
           <div className="button-main-top">
