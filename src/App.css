@@ -184,11 +184,25 @@ h2 {
   letter-spacing: 0.6rem;
 }
 
-.cont-image {
+.isImage {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 3rem;
+  flex-direction: column;
+  width: 150px;
+  height: auto;
+  border: 2px solid #e4e1de;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #e4e1de;
+  border-radius: 4px;
+}
+
+.contImage {
+  display: grid;
+  grid-template-columns: 180px 180px;
 }
 
 .cont-text {

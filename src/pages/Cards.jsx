@@ -17,21 +17,19 @@ function Cards () {
 
   return (
         <div>
-          <div>
+          <div className="title-card">
+            <h2 className="letter-card">Pokemon Cards</h2>
+          </div>
+          <div className="button-main-top">
+            <button className="button-create-top">Create Card</button>
+          </div>
+          <div className="contImage">
             {cards.map(card => (
-              <div key={card._id}>
-                <Link
-                  to={`/cards/${card._id}`}>
-                  <div>
-                    <img src={card.image} style={{ width: '200px'}} alt={card.name} />
-                  </div>
-                  <div>
-                    <h1>{card.name}</h1>
-                    <h1>{card.element}</h1>
-                    <h1>{card.decription}</h1>
-                    <h1>{card.attack}</h1>
-                    <h1>{card.hp}</h1>
-                    <h1>{card.ability}</h1>
+              <div key={card._id} >
+                <Link  to={`/cards/${card._id}`}>
+                  <div className="isImage">
+                    <img src={card.image}  alt={card.name} />
+                    <h3>{card.name}</h3>
                   </div>
                 </Link>
               </div>
