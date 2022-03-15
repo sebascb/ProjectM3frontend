@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import apiService from "../services/api.service";
+import SearchBar from '../components/SearchBar';
 
 function Cards () {
   const [cards, setCards] = useState([]);
@@ -19,6 +20,9 @@ function Cards () {
         <div>
           <div className="title-card">
             <h2 className="letter-card">Pokemon Cards</h2>
+          </div>
+          <div> 
+            <SearchBar />
           </div>
           <div className="button-main-top">
             <button className="button-create-top">Create Card</button>
