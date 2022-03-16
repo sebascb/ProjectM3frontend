@@ -8,6 +8,7 @@ function SignupPage() {
   const [name, setName] = useState('');
   const [errorMessage, setErrorMessage] = useState(undefined);
   const { signup } = useContext(AuthContext);
+  const [passwordShown, setPasswordShown] = useState(true);
 
   const navigate = useNavigate();
 
@@ -33,23 +34,29 @@ function SignupPage() {
       });
   };
 
+  const togglePassword = () => {
+    // When the handler is invoked
+    // inverse the boolean state of passwordShown
+    setPasswordShown(!passwordShown);
+  };
+
   return (
     <div className="SignupPage">
       <h1>Sign Up</h1>
 
       <form onSubmit={handleSignupSubmit}>
         <label>Email:</label>
-        <input type="email" name="email" value={email} onChange={handleEmail} />
+        <input type="email" name="email" value={email} onChange={handleEmail} placeholder="Include your email"/>
 
         <label>Password:</label>
-        <input type="password" name="password" value={password} onChange={handlePassword} placeholder="Include uppercase and number"/>
+        <input type={passwordShown ? "text" : "password"} name="password" value={password} onChange={handlePassword} placeholder="Include uppercase and number"/>
 
         <label>Name:</label>
-        <input type="text" name="name" value={name} onChange={handleName} />
+        <input type="text" name="name" value={name} onChange={handleName} placeholder="Include your user name"/>
 
         <button type="submit">Sign Up</button>
       </form>
-
+      <button onClick={togglePassword}>👁️‍🗨️</button>
       {errorMessage && <p className="error-message">{errorMessage}</p>}
 
       <p>Already have account?</p>
