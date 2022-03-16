@@ -7,6 +7,7 @@ function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState(undefined);
+  const [passwordShown, setPasswordShown] = useState(true);
 
   const navigate = useNavigate();
 
@@ -28,6 +29,12 @@ function LoginPage() {
         setErrorMessage(errorDescription);
       });
   };
+ 
+  const togglePassword = () => {
+    // When the handler is invoked
+    // inverse the boolean state of passwordShown
+    setPasswordShown(!passwordShown);
+  };
 
   return (
     <div className="LoginPage">
@@ -38,10 +45,11 @@ function LoginPage() {
         <input type="email" name="email" value={email} onChange={handleEmail} />
 
         <label>Password:</label>
-        <input type="password" name="password" value={password} onChange={handlePassword} />
-
+        <input type={passwordShown ? "text" : "password"} name="password" value={password} onChange={handlePassword} placeholder="Include uppercase and number"/>
+       
         <button type="submit">Login</button>
       </form>
+       <button onClick={togglePassword}>👁️‍🗨️</button>
       {errorMessage && <p className="error-message">{errorMessage}</p>}
 
       <p>Dont have an account yet?</p>

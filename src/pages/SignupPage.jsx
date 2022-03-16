@@ -42,7 +42,7 @@ function SignupPage() {
         <input type="email" name="email" value={email} onChange={handleEmail} />
 
         <label>Password:</label>
-        <input type="password" name="password" value={password} onChange={handlePassword} />
+        <input type="password" name="password" value={password} onChange={handlePassword} placeholder="Include uppercase and number"/>
 
         <label>Name:</label>
         <input type="text" name="name" value={name} onChange={handleName} />
