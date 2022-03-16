@@ -1,6 +1,6 @@
 [
   {
-    "image": "https://img.pokemondb.net/artwork/large/charmander.jpg",
+    "image": "https://img.pokemondb.net/sprites/home/normal/charmander.png",
     "name": "Charmander",
     "element": "fire",
     "description": "Prefers hot things. They say that when it rains steam comes out of the tip of its tail.",
@@ -9,7 +9,7 @@
     "ability": "Flames Sea"
   },
   {
-    "image": "https://img.pokemondb.net/artwork/large/pikachu.jpg",
+    "image": "https://img.pokemondb.net/sprites/home/normal/pikachu.png",
     "name": "Pikachu",
     "element": "electric",
     "description": "When several of these POKKéMON gather, their electricity could build and cause lightning storms.",
@@ -18,7 +18,7 @@
     "ability": "Static"
   },
   {
-    "image": "https://img.pokemondb.net/artwork/large/zubat.jpg",
+    "image": "https://img.pokemondb.net/sprites/go/normal/zubat.png",
     "name": "Zubat",
     "element": "poison",
     "description": "Forms colonies in perpetually dark places. Uses ultrasonic waves to identify and approach targets.",
@@ -27,7 +27,7 @@
     "ability": "Inner Focus"
   },
   {
-    "image": "https://img.pokemondb.net/artwork/large/bulbasaur.jpg",
+    "image": "https://img.pokemondb.net/sprites/home/normal/bulbasaur.png",
     "name": "Bulbasaur",
     "element": "grass",
     "description": "A strange seed was planted on its back at birth. The plant sprouts and grows with this POKKéMON.",
@@ -36,7 +36,7 @@
     "ability": "Overgrow"
   },
   {
-    "image": "https://img.pokemondb.net/artwork/large/squirtle.jpg",
+    "image": "https://img.pokemondb.net/sprites/home/normal/squirtle.png",
     "name": "Squirtle",
     "element": "water",
     "description": "After birth, its back swells and hardens into a shell. Powerfully sprays foam from its mouth.",
@@ -45,7 +45,7 @@
     "ability": "Torrent"
   },
   {
-    "image": "https://img.pokemondb.net/artwork/large/weedle.jpg",
+    "image": "https://img.pokemondb.net/sprites/home/normal/weedle.png",
     "name": "Weedle",
     "element": "poison",
     "description": "Often found in forests, eating leaves. It has a sharp venomous stinger on its head.",
@@ -54,7 +54,7 @@
     "ability": "Shield Dust"
   },
   {
-    "image": "https://img.pokemondb.net/artwork/large/rattata.jpg",
+    "image": "https://img.pokemondb.net/sprites/home/normal/rattata.png",
     "name": "Rattata",
     "element": "normal",
     "description": "Bites anything when it attacks. Small and very quick, it is a common sight in many places.",
@@ -63,7 +63,7 @@
     "ability": "Run Away"
   },
   {
-    "image": "https://img.pokemondb.net/artwork/large/ekans.jpg",
+    "image": "https://img.pokemondb.net/sprites/home/normal/ekans.png",
     "name": "Ekans",
     "element": "poison",
     "description": "Moves silently and stealthily. Eats the eggs of birds.",
@@ -72,8 +72,8 @@
     "ability": "Intimidate"
   },
   {
-    "image": "https://img.pokemondb.net/artwork/large/vulpix.jpg",
-    "name": "Pesterix",
+    "image": "https://img.pokemondb.net/sprites/home/normal/vulpix.png",
+    "name": "Vulpix",
     "element": "fire",
     "description": "When she sleeps she is adorable but if you wake her up she transforms",
     "attack": 50,
@@ -81,7 +81,7 @@
     "ability": "Little Monster"
   },
   {
-    "image": "https://img.pokemondb.net/artwork/large/oddish.jpg",
+    "image": "https://img.pokemondb.net/sprites/home/normal/oddish.png",
     "name": "Oddish",
     "element": "grass",
     "description": "During the day, it keeps its face buried in the ground. At night, it wanders around sowing its seeds.",
