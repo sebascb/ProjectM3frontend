@@ -40,7 +40,7 @@ function Cards () {
             <h2 className="letter-card">Pokemon Cards</h2>
           </div>
           <div className="searchBar"> 
-          <input type="text" name="name" value={input} onChange={handleBar} placeholder="search" />
+          <input className="bar" type="text" name="name" value={input} onChange={handleBar} placeholder="search" />
           </div>
           <div className="button-main-top">
             <Link to="/cards/create">
@@ -52,7 +52,7 @@ function Cards () {
               <div key={card._id} >
                 <Link  to={`/cards/${card._id}`}>
                   <div className="isImage">
-                    <img src={card.image}  alt={card.name} />
+                    <img className="imageCard" src={card.image}  alt={card.name} />
                     <h3>{card.name}</h3>
                   </div>
                 </Link>

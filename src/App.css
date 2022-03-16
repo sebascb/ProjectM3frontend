@@ -189,6 +189,15 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.bar {
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  border-color:#f18546;
 }
 
 .isImage {
@@ -198,17 +207,22 @@ h2 {
   flex-direction: column;
   width: 150px;
   height: 220px;
-  border: 2px solid #e4e1de;
+  border: 2px solid #b8b6b4;
   margin-bottom: 1rem;
   margin-left: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   border-radius: 4px;
+  background-color: #e4e1de;
 }
 
 .contImage {
   display: grid;
   grid-template-columns: 180px 180px;
+}
+
+.imageCard {
+  width: 200px;
 }
 
 h3 {
@@ -249,6 +263,25 @@ h3 {
   text-decoration: none;
   color: #2081c3;
   letter-spacing: 0.1rem;
+}
+
+/* Detail */
+
+.detailCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 320px;
+  height: 440px;
+  border: 2px solid #b8b6b4;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1.7rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 4px;
+  background-color: #e4e1de;
 }
 
 
@@ -356,37 +389,6 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/*Nav bar*/
-.nav-bar {
-  margin-top: 0.5rem;
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  padding: 0;
-  gap: 0.1rem;
-  text-decoration: none;
-  color: #1192e7;
-  padding: 0px 10px;
-  background-color: rgb(255, 255, 255);
-}
-
-.nav-bar-ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  padding: 0;
-  gap: 1.5rem;
-}
-
-.nav-bar-a {
-text-decoration: none;
-color: #2081c3;
-}
-
-.nav-bar-li {
-  padding: 0px 10px;
 }
 
 /*Logo spin */
