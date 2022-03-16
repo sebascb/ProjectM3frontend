@@ -62,16 +62,17 @@ function Detail () {
 
    return (
               <div>
-                <p>{detailCard.name}</p>
+                
                   <div>
                     <img src={detailCard.image} style={{ width: '200px'}} alt={detailCard.name} />
                   </div>
                   <div>
-                    <p>{detailCard.element}</p>
-                    <p>{detailCard.decription}</p>
-                    <p>{detailCard.attack}</p>
-                    <p>{detailCard.hp}</p>
-                    <p>{detailCard.ability}</p>
+                    <p>Name: {detailCard.name}</p>
+                    <p>Element: {detailCard.element}</p>
+                    <p>Description: {detailCard.description}</p>
+                    <p>Attack: {detailCard.attack}</p>
+                    <p>HP: {detailCard.hp}</p>
+                    <p>Ability: {detailCard.ability}</p>
                     <Link to={`/cards/${cardId}/edit`}>Edit</Link>
                     <button onClick={handleDelete}>Delete</button>
                     {favorite ? <button onClick={handleUnfavorite}>Unfavorite</button> : <button onClick={handleFavorite}>Favorite</button>}
