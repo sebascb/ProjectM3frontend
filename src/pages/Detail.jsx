@@ -61,24 +61,27 @@ function Detail () {
     }
 
    return (
-              <div>
-                
-                  <div>
-                    <img src={detailCard.image} style={{ width: '200px'}} alt={detailCard.name} />
-                  </div>
-                  <div>
-                    <p>Name: {detailCard.name}</p>
-                    <p>Element: {detailCard.element}</p>
-                    <p>Description: {detailCard.description}</p>
-                    <p>Attack: {detailCard.attack}</p>
-                    <p>HP: {detailCard.hp}</p>
-                    <p>Ability: {detailCard.ability}</p>
-                    <Link to={`/cards/${cardId}/edit`}>Edit</Link>
-                    <button onClick={handleDelete}>Delete</button>
-                    {favorite ? <button onClick={handleUnfavorite}>Unfavorite</button> : <button onClick={handleFavorite}>Favorite</button>}
-                     <button onClick={checkIfFavorite}>Checkiffav</button>
-                  </div>
-              </div>
+     <>
+       <div className="detailCont">
+         <div>
+           <img src={detailCard.image} style={{ width: '200px' }} alt={detailCard.name} />
+         </div>
+         <div>
+           <p>Name: {detailCard.name}</p>
+           <p>Element: {detailCard.element}</p>
+           <p>Description: {detailCard.description}</p>
+           <p>Attack: {detailCard.attack}</p>
+           <p>HP: {detailCard.hp}</p>
+           <p>Ability: {detailCard.ability}</p>
+         </div>
+       </div>
+       <div>
+         <Link to={`/cards/${cardId}/edit`}>Edit</Link>
+         <button onClick={handleDelete}>Delete</button>
+         {favorite ? <button onClick={handleUnfavorite}>Unfavorite</button> : <button onClick={handleFavorite}>Favorite</button>}
+         <button onClick={checkIfFavorite}>Checkiffav</button>
+       </div>
+     </>
       );
     }
 
