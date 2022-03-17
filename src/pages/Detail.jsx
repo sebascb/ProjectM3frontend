@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import apiService from "../services/api.service";
 
-function Detail () {
+function Detail() {
   const [detailCard, setDetailCard] = useState({});
-  // const [favorite, setFavorite] = useState(false);
+  const [favorite, setFavorite] = useState(false);
   const { cardId } = useParams();
   const navigate = useNavigate();
 
@@ -13,85 +13,88 @@ function Detail () {
     try {
       const response = await apiService.getDetail(cardId);
       setDetailCard(response.data)
-    }catch(error){
+    } catch (error) {
       console.log(error)
     }
   };
 
-  // const checkIfFavorite = async () => {
-  //   try {
-  //     const response = await apiService.getFavorite(cardId);
-  //     setFavorite(response.data)
-  //   }catch(error){
-  //     console.log(error)
-  //   }
-  // };
+  const checkIfFavorite = async () => {
+    try {
+      const response = await apiService.getFavorite(cardId);
+      if (response.data.length > 0) {
+        setFavorite(true);
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  };
 
-   useEffect(() => {
+  useEffect(() => {
     getCardDetail();
+    checkIfFavorite();
   }, []);
 
   const handleDelete = () => {
-        apiService.delete(cardId).then(() => {
-          navigate('/cards');
-      })
+    apiService.delete(cardId).then(() => {
+      navigate('/cards');
+    })
       .catch(error => {
         console.log(error);
       });
   };
 
   const handleFavorite = e => {
-        // checkIfFavorite();
-        e.preventDefault();
-        apiService.favorite(cardId).then(() => {
-                navigate('/profile');
-            })
-            .catch(error => {
-                console.log(error)
-            })
-    }
+    // checkIfFavorite();
+    e.preventDefault();
+    apiService.favorite(cardId).then(() => {
+      setFavorite(true);
+    })
+      .catch(error => {
+        console.log(error)
+      })
+  }
 
-    const handleUnfavorite = e => {
-        // checkIfFavorite();
-        e.preventDefault();
-      apiService.deleteFavorite(cardId).then(() => {
-                navigate('/cards');
-            })
-            .catch(error => {
-                console.log(error)
-            })
-    }
+  const handleUnfavorite = e => {
+    // checkIfFavorite();
+    e.preventDefault();
+    apiService.deleteFavorite(cardId).then(() => {
+      setFavorite(false);
+    })
+      .catch(error => {
+        console.log(error)
+      })
+  }
 
-   return (
-     <>
-       <div>
-         <div className='title-card'>
-           <h2 className='letter-card'>Pokkemon Detail</h2>
-         </div>
-         <div className="detailCont">
-           <div>
-             <img src={detailCard.image} style={{ width: '200px' }} alt={detailCard.name} />
-           </div>
-           <div className='cont-text'>
-             <p>Name: {detailCard.name}</p>
-             <p>Element: {detailCard.element}</p>
-             <p>Description: {detailCard.description}</p>
-             <p>Attack: {detailCard.attack}</p>
-             <p>HP: {detailCard.hp}</p>
-             <p>Ability: {detailCard.ability}</p>
-           </div>
-         </div>
-         <div className='cont-button'>
-           <Link to={`/cards/${cardId}/edit`} className='button-card'>Edit</Link>
-           <button onClick={handleDelete} className='button-card'>Delete</button>
-           {/* {favorite ? <button onClick={handleUnfavorite} className='button-card'>Unfavorite</button> : <button onClick={handleFavorite} className='button-card'>Favorite</button>}
-                   */}
-           <button onClick={handleUnfavorite} className='button-card'>Unfavorite</button>
-           <button onClick={handleFavorite} className='button-card'>Favorite</button>
+  return (
+    <>
+      <div>
+        <div className='title-card'>
+          <h2 className='letter-card'>Pokkemon Detail</h2>
         </div>
-       </div>
-     </>
-      );
-    }
+        <div className="detailCont">
+          <div>
+            <img src={detailCard.image} style={{ width: '200px' }} alt={detailCard.name} />
+          </div>
+          <div className='cont-text'>
+            <p>Name: {detailCard.name}</p>
+            <p>Element: {detailCard.element}</p>
+            <p>Description: {detailCard.description}</p>
+            <p>Attack: {detailCard.attack}</p>
+            <p>HP: {detailCard.hp}</p>
+            <p>Ability: {detailCard.ability}</p>
+          </div>
+        </div>
+        <div className='cont-button'>
+          <Link to={`/cards/${cardId}/edit`} className='button-card'>Edit</Link>
+          <button onClick={handleDelete} className='button-card'>Delete</button>
+          {favorite ? <button onClick={handleUnfavorite} className='button-card'>Unfavorite</button> : <button onClick={handleFavorite} className='button-card'>Favorite</button>}
+
+          {/* <button onClick={handleUnfavorite} className='button-card'>Unfavorite</button>
+          <button onClick={handleFavorite} className='button-card'>Favorite</button>*/}
+        </div>
+      </div>
+    </>
+  );
+}
 
 export default Detail;

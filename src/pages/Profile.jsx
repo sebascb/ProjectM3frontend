@@ -54,7 +54,7 @@ function Profile() {
   // }, []);
 
   const handleFavorite = e => {
-    e.preventDefault();   
+    e.preventDefault();
     // checkIfFavorite();
     apiService.favorite(cardId).then(() => {
       navigate('/profile');
@@ -67,6 +67,7 @@ function Profile() {
   const handleUnfavorite = e => {
     e.preventDefault();
     // checkIfFavorite();
+    console.log('This is the id', cardId);
     apiService.deleteFavorite(cardId).then(() => {
       console.log("He pasado el puto apiservice");
       navigate('/cards');
@@ -104,7 +105,7 @@ function Profile() {
         )
       })
       }
-      
+
     </div>
   );
 }
