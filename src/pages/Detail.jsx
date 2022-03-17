@@ -62,24 +62,29 @@ function Detail () {
 
    return (
      <>
-       <div className="detailCont">
-         <div>
-           <img src={detailCard.image} style={{ width: '200px' }} alt={detailCard.name} />
-         </div>
-         <div>
-           <p>Name: {detailCard.name}</p>
-           <p>Element: {detailCard.element}</p>
-           <p>Description: {detailCard.description}</p>
-           <p>Attack: {detailCard.attack}</p>
-           <p>HP: {detailCard.hp}</p>
-           <p>Ability: {detailCard.ability}</p>
-         </div>
-       </div>
        <div>
-         <Link to={`/cards/${cardId}/edit`}>Edit</Link>
-         <button onClick={handleDelete}>Delete</button>
-         {favorite ? <button onClick={handleUnfavorite}>Unfavorite</button> : <button onClick={handleFavorite}>Favorite</button>}
-         <button onClick={checkIfFavorite}>Checkiffav</button>
+         <div className='title-card'>
+           <h2 className='letter-card'>Pokkemon Detail</h2>
+         </div>
+         <div className="detailCont">
+           <div>
+             <img src={detailCard.image} style={{ width: '200px' }} alt={detailCard.name} />
+           </div>
+           <div className='cont-text'>
+             <p>Name: {detailCard.name}</p>
+             <p>Element: {detailCard.element}</p>
+             <p>Description: {detailCard.description}</p>
+             <p>Attack: {detailCard.attack}</p>
+             <p>HP: {detailCard.hp}</p>
+             <p>Ability: {detailCard.ability}</p>
+           </div>
+         </div>
+         <div className='cont-button'>
+           <Link to={`/cards/${cardId}/edit`} class='button-card'>Edit</Link>
+           <button onClick={handleDelete} className='button-card'>Delete</button>
+           {favorite ? <button onClick={handleUnfavorite} className='button-card'>Unfavorite</button> : <button onClick={handleFavorite} className='button-card'>Favorite</button>}
+           <button onClick={checkIfFavorite}>Checkiffav</button>
+         </div>
        </div>
      </>
       );

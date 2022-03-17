@@ -41,7 +41,7 @@ function Profile() {
       <h2>Profile</h2>
       {showFavs.map(fav => {
         return (
-          <div key={fav.card._id}>
+          <div key={fav.card._id} className="detailCont">
             <h3>{fav.card.name}</h3>
             <div>
               <img src={fav.card.image} style={{ width: '200px' }} alt={fav.card.name} />
