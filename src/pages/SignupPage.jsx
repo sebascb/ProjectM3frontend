@@ -8,7 +8,7 @@ function SignupPage() {
   const [name, setName] = useState('');
   const [errorMessage, setErrorMessage] = useState(undefined);
   const { signup } = useContext(AuthContext);
-  const [passwordShown, setPasswordShown] = useState(true);
+  const [passwordShown, setPasswordShown] = useState(false);
 
   const navigate = useNavigate();
 
