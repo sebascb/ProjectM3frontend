@@ -66,7 +66,8 @@ class ApiService {
   };
 
   deleteFavorite = (id) => {
-    return this.api.delete(`/cards/${id}/favorite`);
+    console.log("soy el api service deletefav")
+    return this.api.delete(`/fav/${id}`);
   }
 
   getProfile = () => {

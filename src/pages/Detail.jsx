@@ -5,7 +5,7 @@ import apiService from "../services/api.service";
 
 function Detail () {
   const [detailCard, setDetailCard] = useState({});
-  const [favorite, setFavorite] = useState(false);
+  // const [favorite, setFavorite] = useState(false);
   const { cardId } = useParams();
   const navigate = useNavigate();
 
@@ -18,14 +18,14 @@ function Detail () {
     }
   };
 
-  const checkIfFavorite = async () => {
-    try {
-      const response = await apiService.getFavorite(cardId);
-      setFavorite(response.data)
-    }catch(error){
-      console.log(error)
-    }
-  };
+  // const checkIfFavorite = async () => {
+  //   try {
+  //     const response = await apiService.getFavorite(cardId);
+  //     setFavorite(response.data)
+  //   }catch(error){
+  //     console.log(error)
+  //   }
+  // };
 
    useEffect(() => {
     getCardDetail();
@@ -41,6 +41,7 @@ function Detail () {
   };
 
   const handleFavorite = e => {
+        // checkIfFavorite();
         e.preventDefault();
         apiService.favorite(cardId).then(() => {
                 navigate('/profile');
@@ -51,8 +52,9 @@ function Detail () {
     }
 
     const handleUnfavorite = e => {
+        // checkIfFavorite();
         e.preventDefault();
-        apiService.favorite(cardId).then(() => {
+      apiService.deleteFavorite(cardId).then(() => {
                 navigate('/cards');
             })
             .catch(error => {
@@ -80,11 +82,13 @@ function Detail () {
            </div>
          </div>
          <div className='cont-button'>
-           <Link to={`/cards/${cardId}/edit`} class='button-card'>Edit</Link>
+           <Link to={`/cards/${cardId}/edit`} className='button-card'>Edit</Link>
            <button onClick={handleDelete} className='button-card'>Delete</button>
-           {favorite ? <button onClick={handleUnfavorite} className='button-card'>Unfavorite</button> : <button onClick={handleFavorite} className='button-card'>Favorite</button>}
-           <button onClick={checkIfFavorite}>Checkiffav</button>
-         </div>
+           {/* {favorite ? <button onClick={handleUnfavorite} className='button-card'>Unfavorite</button> : <button onClick={handleFavorite} className='button-card'>Favorite</button>}
+                   */}
+           <button onClick={handleUnfavorite} className='button-card'>Unfavorite</button>
+           <button onClick={handleFavorite} className='button-card'>Favorite</button>
+        </div>
        </div>
      </>
       );
