@@ -22,6 +22,7 @@ body {
   font-size: 16px;
   font-family: 'Rubik', sans-serif;
   color: var(--dark-grey);
+  background-color: #333;
 }
 
 /* Home */
@@ -71,17 +72,16 @@ h2 {
   --icon-color: #483C3E;
 }
 
-body{
-  display: grid;
-  min-height: 100vh;
+.pikachuBox {
+  display: flex;
+  /* min-height: 100vh; */
+  justify-content: center;
+  align-items: center;
   place-items: center;
   background-color: #333;
+  margin-left: 5rem;
 }
 
-homePikachu {
-  display: flex;
-  justify-content: center;
-}
 /* BOX STYLES*/
 .box{
   position: relative;

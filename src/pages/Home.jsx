@@ -9,7 +9,7 @@ function Home() {
         <h2>Version JS</h2>
         <h2>Platinum</h2>
       </div>
-      <div className="homePikachu">
+      <div className="pikachuBox">
         <div className="box">
           <div className="face bottom"></div>
           <div className="face back"></div>
