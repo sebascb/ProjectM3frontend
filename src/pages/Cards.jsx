@@ -6,7 +6,6 @@ import apiService from "../services/api.service";
 function Cards () {
   const [cards, setCards] = useState([]);
   const [input, setInput] = useState('');
- // const apiURL = "https://cranky-lewin-d3d1ec.netlify.app/cards";
 
   useEffect(() => {
     apiService.getCards().then((response) => {

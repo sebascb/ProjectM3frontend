@@ -44,7 +44,6 @@ function Detail() {
   };
 
   const handleFavorite = e => {
-    // checkIfFavorite();
     e.preventDefault();
     apiService.favorite(cardId).then(() => {
       setFavorite(true);
@@ -55,7 +54,6 @@ function Detail() {
   }
 
   const handleUnfavorite = e => {
-    // checkIfFavorite();
     e.preventDefault();
     apiService.deleteFavorite(cardId).then(() => {
       setFavorite(false);
@@ -88,9 +86,6 @@ function Detail() {
           <Link to={`/cards/${cardId}/edit`} className='button-card'>Edit</Link>
           <button onClick={handleDelete} className='button-card'>Delete</button>
           {favorite ? <button onClick={handleUnfavorite} className='button-card'>Unfavorite</button> : <button onClick={handleFavorite} className='button-card'>Favorite</button>}
-
-          {/* <button onClick={handleUnfavorite} className='button-card'>Unfavorite</button>
-          <button onClick={handleFavorite} className='button-card'>Favorite</button>*/}
         </div>
       </div>
     </>
