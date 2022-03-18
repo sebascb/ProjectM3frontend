@@ -10,7 +10,7 @@ function Navbar() {
 
   return (
      <nav className="flex items-center flex-start flex-wrap bg-gray-700 p-2">  
-       <div className="flex items-center flex-shrink-0 text-white mr-3">
+       <div className="flex items-center flex-shrink-0 text-white mr-0">
        <span className="font-semibold text-xl tracking-tight"><Link to="/"><img className="fill-current h-8 w-8 mr-2 App-logo"  width="54" height="54" viewBox="0 0 54 54" src={Balls}></img>
        </Link></span>
        </div>
@@ -19,16 +19,16 @@ function Navbar() {
    <div className="text-sm sm:flex-grow">
       {isLoggedIn && (
         <>
-          <Link to="/cards" className="inline-flex items-center justify-center p-2 text-teal-200 hover:text-white mr-2">
+          <Link to="/cards" className="inline-flex items-center justify-center p-2 text-teal-200 hover:text-white mr-0">
             <button>Cards</button>
           </Link>
-          <Link to="/cards/create" className="inline-flex items-center justify-center p-2 text-teal-200 hover:text-white mr-2">
+          <Link to="/cards/create" className="inline-flex items-center justify-center p-2 text-teal-200 hover:text-white mr-0">
             <button>Create</button>
           </Link>
-          <Link to="/profile" className="inline-flex items-center justify-center p-2 text-teal-200 hover:text-white mr-2">
+          <Link to="/profile" className="inline-flex items-center justify-center p-2 text-teal-200 hover:text-white mr-0">
             <button>Profile</button>
           </Link>
-          <span className="inline-flex items-center justify-center p-2 text-orange-600 hover:text-white mr-4">{user && user.name}</span>
+          <span className="inline-flex items-center justify-center p-2 text-orange-600 hover:text-white mr-0">{user && user.name}</span>
         </>
       )}
 </div>
