@@ -51,7 +51,6 @@ function App() {
         <Route path='/profile' element={< Profile />}/>
         <Route path="*" element={<div>404 Not Found</div>} />
       </Routes>
-      <Navbar />
     </AuthProviderWrapper>
   );
 }
