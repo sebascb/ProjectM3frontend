@@ -4,10 +4,10 @@ function Home() {
 
   return (
     <div>
-      <div>
+      <div className="welcome-screen">
         <h1>Pokemon App</h1>
         <h2>Version JS</h2>
-        <h2>Platinum</h2>
+        <h3 className="platinum">platinum</h3>
       </div>
       <div className="pikachuBox">
         <div className="box">
