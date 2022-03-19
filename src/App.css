@@ -35,20 +35,25 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 500;
   color: #f39761;
   margin-top: 10px;
 }
 
-/* .welcome-screen {
+.welcome-screen {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  background-color: rgb(137, 238, 238);
-} */
+  margin-top: 30px;
+} 
+
+.platinum {
+  margin-top: -1rem;
+  font-size: 1.5rem;
+  color: #e2e5de;
+}
 /* .home-img {
   width: 300px;
   height: auto;
@@ -73,12 +78,11 @@ h2 {
 
 .pikachuBox {
   display: flex;
-  /* min-height: 100vh; */
   justify-content: center;
   align-items: center;
   place-items: center;
   background-color: #333;
-  margin-top: 6rem;
+  margin-top: 9rem;
   margin-left: 5rem;
 }
 
