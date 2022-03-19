@@ -148,7 +148,7 @@ h2 {
   height: calc(var(--size) / 2);
   background-color: #EBB27A;
   position: absolute;
-  transition: transform 0.5s .35s linear;
+  transition: transform 0.1s .5s linear;
   z-index: 8;
 }
 .cover-back::after, .cover-front::after{
@@ -171,7 +171,7 @@ h2 {
 }
 .top:active > .cover-back{
   transform: rotatex(-200deg);
-  transition: transform 0.5s linear;
+  transition: transform 0.1s linear;
 }
 .cover-front{
   left: 0;
@@ -180,14 +180,14 @@ h2 {
 }
 .top:active > .cover-back + .cover-right + .cover-left + .cover-front{
   transform: rotatex(200deg);
-  transition: transform .5s linear;
+  transition: transform .1s linear;
 }
 .cover-left, .cover-right{
   height: var(--size);
   width: calc(var(--size) / 3);
   background-color: #c99e76;
   position: absolute;
-  transition: transform .5s linear;
+  transition: transform .0,5s linear;
   z-index: 7;
 }
 .cover-left{
@@ -197,7 +197,7 @@ h2 {
 }
 .top:active > .cover-back + .cover-right + .cover-left{
   transform: rotatey(-190deg);
-  transition: transform .5s .35s linear;
+  transition: transform .0,5s .35s linear;
 }
 .cover-right{
   right: 0;
@@ -206,7 +206,7 @@ h2 {
 }
 .top:active > .cover-back + .cover-right{
   transform: rotatey(190deg);
-  transition: transform .5s .35s linear;
+  transition: transform .0,5s .35s linear;
 }
 .content{
   width: 80%;
@@ -218,14 +218,14 @@ h2 {
   transform: rotateY(-216deg) 
     translatez(calc(var(--size) / -2 )) 
     translatex(-50%);
-  transition: transform .4s linear;
+  transition: transform .0,1s 10s linear;
   
 }
 .top:active + .content{
   transform: rotateY(-216deg) 
     translatez(calc(var(--size) / -2 )) 
     translatex(-50%) translatey(-82%);
-  transition: transform .5s 1s 
+  transition: transform .0,3s 1s 
     cubic-bezier(.24,.05,.66,1.24);
 }
 
