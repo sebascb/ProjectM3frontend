@@ -47,17 +47,17 @@ function LoginPage() {
         <input className='input-login' type="email" name="email" value={email} onChange={handleEmail} placeholder="Include your email"/>
 
         <label className='label-login'>Password:</label>
-        <div className='inputEye'>
-          <input className='input-login' type={passwordShown ? "text" : "password"} name="password" value={password} onChange={handlePassword} placeholder="Include uppercase and number" />
+        <input className='input-login' type={passwordShown ? "text" : "password"} name="password" value={password} onChange={handlePassword} placeholder="Include uppercase and number" />
           
-        </div>
         <div className='cont-button-login'>
         <button className='button-login' type="submit">Login</button>
         </div>
       </form>
       
       <div className='have-account'>
-        <div className='eye'><button className='eye' onClick={togglePassword}>👁️‍🗨️</button></div>
+        <div className='inputEye'>
+          <button className='eye' onClick={togglePassword}>👁️‍🗨️</button>
+        </div>
         {errorMessage && <p className="error-message">{errorMessage}</p>}
         <p>Dont have an account yet?</p>
         <Link to={'/signup'}> Sign Up</Link>

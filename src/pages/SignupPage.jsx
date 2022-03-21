@@ -64,8 +64,10 @@ function SignupPage() {
         </form>
         
         <div className='have-account'>
-          <button className='eye' onClick={togglePassword}>👁️‍🗨️</button>
-          <p>{errorMessage && <p className="error-message">{errorMessage}</p>}</p>
+          <div className='inputEye'>
+            <button className='eye' onClick={togglePassword}>👁️‍🗨️</button>
+          </div>
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
           <p>Already have account?</p>
           <Link to={'/login'}> Login</Link>
         </div>

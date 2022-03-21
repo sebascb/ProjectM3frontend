@@ -45,18 +45,18 @@ function Create () {
            <label className="label-crt">Image</label>
            <select className="input-crt" name="image" value={newCard.image} onChange={handleForm}>
              <option value=""></option>
-             <option value="https://img.pokemondb.net/artwork/large/wigglytuff.jpg">Wigglytuff</option>
-             <option value="https://img.pokemondb.net/artwork/large/gloom.jpg">Gloom</option>
-             <option value="https://img.pokemondb.net/artwork/large/venonat.jpg">Venonat</option>
-             <option value="https://img.pokemondb.net/artwork/large/venomoth.jpg">Venomoth</option>
-             <option value="https://img.pokemondb.net/artwork/large/diglett.jpg">Diglett</option>
-             <option value="https://img.pokemondb.net/artwork/large/meowth.jpg">Meowth</option>
-             <option value="https://img.pokemondb.net/artwork/large/psyduck.jpg">Psyduck</option>
-             <option value="https://img.pokemondb.net/artwork/large/growlithe.jpg">Growlithe</option>
-             <option value="https://img.pokemondb.net/artwork/large/poliwag.jpg">Poliwag</option>
-             <option value="https://img.pokemondb.net/artwork/large/abra.jpg">Abra</option>
-             <option value="https://img.pokemondb.net/artwork/large/machop.jpg">Machop</option>
-             <option value="https://img.pokemondb.net/artwork/large/golem.jpg">Golem</option>
+             <option value="https://img.pokemondb.net/sprites/sun-moon/normal/wigglytuff.png">Wigglytuff</option>
+             <option value="https://img.pokemondb.net/sprites/home/normal/gloom-f.png">Gloom</option>
+             <option value="https://img.pokemondb.net/sprites/home/normal/venonat.png">Venonat</option>
+             <option value="https://img.pokemondb.net/sprites/home/normal/venomoth.png">Venomoth</option>
+             <option value="https://img.pokemondb.net/sprites/home/normal/diglett-alolan.png">Diglett</option>
+             <option value="https://img.pokemondb.net/sprites/home/normal/meowth-alolan.png">Meowth</option>
+             <option value="https://img.pokemondb.net/sprites/home/normal/psyduck.png">Psyduck</option>
+             <option value="https://img.pokemondb.net/sprites/home/normal/growlithe.png">Growlithe</option>
+             <option value="https://img.pokemondb.net/sprites/home/normal/poliwag.png">Poliwag</option>
+             <option value="https://img.pokemondb.net/sprites/home/normal/abra.png">Abra</option>
+             <option value="https://img.pokemondb.net/sprites/home/normal/machop.png">Machop</option>
+             <option value="https://img.pokemondb.net/sprites/legends-arceus/normal/golem.png">Golem</option>
            </select>
            <label className="label-crt">Name</label>
            <input className="input-crt"
