@@ -11,10 +11,11 @@ A pokemon searching cards app where people can create Pokemon cards and collect 
 ## Setup
 Fork this repo
 Clone this repo
-
+```js
 $ cd ProjectM3frontend
 $ npm install
 $ npm start
+
 
 ## User Actions
 
