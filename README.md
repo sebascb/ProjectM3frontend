@@ -9,8 +9,8 @@
 A pokemon searching cards app where people can create Pokemon cards and collect your favorites ones and show them in your profile.
 
 ## Setup
-Fork this repo
-Clone this repo
+- Fork this repo
+- Clone this repo
 ```js
 $ cd ProjectM3frontend
 $ npm install
