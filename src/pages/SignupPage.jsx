@@ -54,8 +54,6 @@ function SignupPage() {
           <label className='label-login'>Password:</label>
           <div className='inputEye'>
             <input className='input-login' type={passwordShown ? "text" : "password"} name="password" value={password} onChange={handlePassword} placeholder="Include uppercase and number" />
-            <button className='eye' onClick={togglePassword}>👁️‍🗨️</button>
-          {errorMessage && <p className="error-message">{errorMessage}</p>} 
           </div>
           
           <label className='label-login'>Name:</label>
@@ -66,6 +64,8 @@ function SignupPage() {
         </form>
         
         <div className='have-account'>
+          <button className='eye' onClick={togglePassword}>👁️‍🗨️</button>
+          <p>{errorMessage && <p className="error-message">{errorMessage}</p>}</p>
           <p>Already have account?</p>
           <Link to={'/login'}> Login</Link>
         </div>

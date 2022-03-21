@@ -586,9 +586,8 @@ clip-path: polygon(50% 0, 80% 30%, 60% 30%, 60% 100%, 40% 100%, 40% 30%, 20% 30%
 }
 
 .eye {
-  width: 2rem;
-  color: #e2e5de;
-  margin-left: -8px;
+  width: 6rem;
+  color: #77bd16;
 }
 
 .cont-button-login {
