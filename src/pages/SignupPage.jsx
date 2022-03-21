@@ -65,7 +65,7 @@ function SignupPage() {
         
         <div className='have-account'>
           <div className='inputEye'>
-            <button className='eye' onClick={togglePassword}>👁️‍🗨️</button>
+            <button className='eye' onClick={togglePassword}>👁️</button>
           </div>
           {errorMessage && <p className="error-message">{errorMessage}</p>}
           <p>Already have account?</p>
