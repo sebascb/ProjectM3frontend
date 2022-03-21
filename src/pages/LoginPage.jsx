@@ -37,23 +37,30 @@ function LoginPage() {
   };
 
   return (
-    <div className="LoginPage">
-      <h1>Login</h1>
+    <div>
+      <div className='title-login'>
+        <h2 className='letter-login'>Login</h2>
+      </div>
 
       <form onSubmit={handleLoginSubmit}>
-        <label>Email:</label>
-        <input type="email" name="email" value={email} onChange={handleEmail} placeholder="Include your email"/>
+        <label className='label-login'>Email:</label>
+        <input className='input-login' type="email" name="email" value={email} onChange={handleEmail} placeholder="Include your email"/>
 
-        <label>Password:</label>
-        <input type={passwordShown ? "text" : "password"} name="password" value={password} onChange={handlePassword} placeholder="Include uppercase and number"/>
-       
-        <button type="submit">Login</button>
+        <label className='label-login'>Password:</label>
+        <div className='inputEye'>
+          <input className='input-login' type={passwordShown ? "text" : "password"} name="password" value={password} onChange={handlePassword} placeholder="Include uppercase and number" />
+          <button className='eye' onClick={togglePassword}>👁️‍🗨️</button>
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
+        </div>
+        <div className='cont-button-login'>
+        <button className='button-login' type="submit">Login</button>
+        </div>
       </form>
-       <button onClick={togglePassword}>👁️‍🗨️</button>
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
-
-      <p>Dont have an account yet?</p>
-      <Link to={'/signup'}> Sign Up</Link>
+       
+      <div className='have-account'>
+        <p>Dont have an account yet?</p>
+        <Link to={'/signup'}> Sign Up</Link>
+      </div>
     </div>
   );
 }

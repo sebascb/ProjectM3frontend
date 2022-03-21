@@ -41,27 +41,36 @@ function SignupPage() {
   };
 
   return (
-    <div className="SignupPage">
-      <h1>Sign Up</h1>
+    <div>
+      <div className="title-login">
+        <h2 className='letter-login'>Sign Up</h2>
+      </div>
 
-      <form onSubmit={handleSignupSubmit}>
-        <label>Email:</label>
-        <input type="email" name="email" value={email} onChange={handleEmail} placeholder="Include your email"/>
+      <div>
+        <form onSubmit={handleSignupSubmit}>
+          <label className='label-login'>Email:</label>
+          <input className='input-login' type="email" name="email" value={email} onChange={handleEmail} placeholder="Include your email" />
 
-        <label>Password:</label>
-        <input type={passwordShown ? "text" : "password"} name="password" value={password} onChange={handlePassword} placeholder="Include uppercase and number"/>
-
-        <label>Name:</label>
-        <input type="text" name="name" value={name} onChange={handleName} placeholder="Include your user name"/>
-
-        <button type="submit">Sign Up</button>
-      </form>
-      <button onClick={togglePassword}>👁️‍🗨️</button>
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
-
-      <p>Already have account?</p>
-      <Link to={'/login'}> Login</Link>
-    </div>
+          <label className='label-login'>Password:</label>
+          <div className='inputEye'>
+            <input className='input-login' type={passwordShown ? "text" : "password"} name="password" value={password} onChange={handlePassword} placeholder="Include uppercase and number" />
+            <button className='eye' onClick={togglePassword}>👁️‍🗨️</button>
+          {errorMessage && <p className="error-message">{errorMessage}</p>} 
+          </div>
+          
+          <label className='label-login'>Name:</label>
+          <input className='input-login' type="text" name="name" value={name} onChange={handleName} placeholder="Include your user name" />
+          <div className='cont-button-login'>
+            <button className='button-login' type="submit">Sign Up</button>
+          </div>
+        </form>
+        
+        <div className='have-account'>
+          <p>Already have account?</p>
+          <Link to={'/login'}> Login</Link>
+        </div>
+      </div>
+    </div >
   );
 }
 

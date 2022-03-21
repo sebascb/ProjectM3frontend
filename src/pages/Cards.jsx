@@ -43,7 +43,7 @@ function Cards() {
         <h2 className="letter-card">Pokemon Cards</h2>
       </div>
       <div className="searchBar">
-        <input className="bar" type="text" name="name" value={input} onChange={handleBar} placeholder="Search" />
+        <input className="bar" type="text" name="name" value={input} onChange={handleBar} placeholder="🔍  Search..." />
       </div>
       <div className="button-main-top">
         <Link to="/cards/create">

@@ -31,9 +31,14 @@ function Profile() {
 
   return (
     <div>
-      <h2>Profile</h2>
-      <p>{currentUser.name}</p>
-      <p>{currentUser.email}</p>
+      <div className="title-profile">
+        <h2 className="letter-profile">Profile</h2>
+      </div>
+      <div className="user-profile">
+        <p>{currentUser.name}</p>
+        <p>{currentUser.email}</p>
+      </div>
+      <div className="contiImage">
       {showFavs.map(fav => {
         return (
           <div key={fav.card._id} className="contImage">
@@ -45,6 +50,7 @@ function Profile() {
         )
       })
       }
+      </div>
     </div>
   );
 }

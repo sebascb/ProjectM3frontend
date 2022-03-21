@@ -38,7 +38,9 @@ function Create () {
    return (
       <div>
         <div>
+          <div className="title-create">
           <h2 className="letter-create">Create your card</h2>
+          </div> 
           <form onSubmit={handleSubmit}>
            <label className="label-crt">Image</label>
            <select className="input-crt" name="image" value={newCard.image} onChange={handleForm}>
