@@ -64,7 +64,6 @@ class ApiService {
   };
 
   deleteFavorite = (id) => {
-    console.log("soy el api service deletefav")
     return this.api.delete(`/fav/${id}/favorite`);
   }
 
