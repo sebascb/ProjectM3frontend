@@ -354,13 +354,13 @@ clip-path: polygon(50% 0, 80% 30%, 60% 30%, 60% 100%, 40% 100%, 40% 30%, 20% 30%
 .label::before{
   content:"From: JS \A To: Ironhack";
   font-family: sans-serif;
-  font-size: .7rem;
+  font-size: .8rem;
   transform: scalex(-1);
   display: inline-block;
   white-space: pre;
   position: absolute;
   right: 3px;
-  top: 3px;
+  top: 2px;
 }
 .label::after{
   height: 15px;
