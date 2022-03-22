@@ -10,11 +10,9 @@ class ApiService {
     this.api.interceptors.request.use(config => {
       // Retrieve the JWT token from the local storage
       const storedToken = localStorage.getItem('authToken');
-
       if (storedToken) {
         config.headers = { Authorization: `Bearer ${storedToken}` };
       }
-
       return config;
     });
   }
@@ -78,7 +76,6 @@ class ApiService {
     return this.api.get('/auth/me');
   }
 }
-
 // Create one instance (object) of the service
 const apiService = new ApiService();
 

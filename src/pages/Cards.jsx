@@ -29,14 +29,6 @@ function Cards() {
     setCards(filteredCards);
   };
 
-  // const filterCard = (input) => {
-  //   const filteredCards = cards.filter((card) => card.name.toLowerCase().includes(input.toLowerCase()));
-  //   setCards(filteredCards);
-  //   if (input === '') {
-  //     setCards(cards);
-  //   }
-  // };
-
   return (
     <div>
       <div className="title-card">
