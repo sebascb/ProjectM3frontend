@@ -46,58 +46,62 @@ function Edit () {
    return (
       <div>
         <div>
-          <h1>Edit card</h1>
+         <div className="title-create">
+            <h2 className="letter-create">Edit card</h2>
+          </div>
           <form onSubmit={handleSubmit}>
-            <label>Image</label>
-            <input
+           <label className="label-crt">Image</label>
+           <input className="input-crt"
               type="text"
               name="image"
               value={editStateCard.image}
               onChange={handleForm}
             />
-            <label>Name</label>
-            <input
+           <label className="label-crt">Name</label>
+           <input className="input-crt"
               type="text"
               name="name"
               value={editStateCard.name}
               onChange={handleForm}
             />
-            <label>Element</label>
-            <input
+           <label className="label-crt">Element</label>
+           <input className="input-crt"
               type="text"
               name="element"
               value={editStateCard.element}
               onChange={handleForm}
             />
-            <label>Description</label>
-            <input
+           <label className="label-crt">Description</label>
+           <input className="input-crt"
               type="text"
               name="description"
               value={editStateCard.description}
               onChange={handleForm}
             />
-            <label>Attack</label>
-            <input
+           <label className="label-crt">Attack</label>
+           <input className="input-crt"
               type="text"
               name="attack"
               value={editStateCard.attack}
               onChange={handleForm}
             />
-            <label>HP</label>
-            <input
+           <label className="label-crt">HP</label>
+           <input className="input-crt"
               type="number"
               name="hp"
               value={editStateCard.hp}
               onChange={handleForm}
             />
-            <label>Ability</label>
-            <input
+           <label className="label-crt">Ability</label>
+           <input className="input-crt"
               type="text"
               name="ability"
               value={editStateCard.ability}
               onChange={handleForm}
             />
-            <button type="submit">Edit</button>
+            <div className="btn-create">
+             <button className="button-create" type="submit">Edit</button>
+            </div>
           </form>
         </div>
       </div>

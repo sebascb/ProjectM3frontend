@@ -49,12 +49,12 @@ function Create () {
              <option value="https://img.pokemondb.net/sprites/home/normal/gloom-f.png">Gloom</option>
              <option value="https://img.pokemondb.net/sprites/home/normal/venonat.png">Venonat</option>
              <option value="https://img.pokemondb.net/sprites/home/normal/venomoth.png">Venomoth</option>
-             <option value="https://img.pokemondb.net/sprites/home/normal/diglett-alolan.png">Diglett</option>
-             <option value="https://img.pokemondb.net/sprites/home/normal/meowth-alolan.png">Meowth</option>
+             <option value="https://img.pokemondb.net/sprites/home/normal/rhydon-f.png">Rhydon</option>
+             <option value="https://img.pokemondb.net/sprites/legends-arceus/normal/alakazam-f.png">Alakazam</option>
              <option value="https://img.pokemondb.net/sprites/home/normal/psyduck.png">Psyduck</option>
              <option value="https://img.pokemondb.net/sprites/home/normal/growlithe.png">Growlithe</option>
-             <option value="https://img.pokemondb.net/sprites/home/normal/poliwag.png">Poliwag</option>
-             <option value="https://img.pokemondb.net/sprites/home/normal/abra.png">Abra</option>
+             <option value="https://img.pokemondb.net/sprites/home/normal/jynx.png">Jynx</option>
+             <option value="https://img.pokemondb.net/sprites/home/normal/tauros.png">Tauros</option>
              <option value="https://img.pokemondb.net/sprites/home/normal/machop.png">Machop</option>
              <option value="https://img.pokemondb.net/sprites/legends-arceus/normal/golem.png">Golem</option>
            </select>
