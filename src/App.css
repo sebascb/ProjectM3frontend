@@ -352,7 +352,7 @@ clip-path: polygon(50% 0, 80% 30%, 60% 30%, 60% 100%, 40% 100%, 40% 30%, 20% 30%
   left: 5px;
 }
 .label::before{
-  content:"From: Oak \A To: Ash";
+  content:"From: JS \A To: Ironhack";
   font-family: sans-serif;
   font-size: .7rem;
   transform: scalex(-1);
