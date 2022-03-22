@@ -74,12 +74,12 @@ function Detail() {
             <img src={detailCard.image} style={{ width: '200px' }} alt={detailCard.name} />
           </div>
           <div className='cont-text-detail'>
-            <p>Name: {detailCard.name}</p>
-            <p>Element: {detailCard.element}</p>
-            <p>Description: {detailCard.description}</p>
-            <p>Attack: {detailCard.attack}</p>
-            <p>HP: {detailCard.hp}</p>
-            <p>Ability: {detailCard.ability}</p>
+            <p><strong>Name:</strong> {detailCard.name}</p>
+            <p><strong>Element:</strong> {detailCard.element}</p>
+            <p><strong>Description:</strong> {detailCard.description}</p>
+            <p><strong>Attack:</strong> {detailCard.attack}</p>
+            <p><strong>HP:</strong> {detailCard.hp}</p>
+            <p><strong>Ability:</strong> {detailCard.ability}</p>
           </div>
         </div>
         <div className='cont-button-detail'>
