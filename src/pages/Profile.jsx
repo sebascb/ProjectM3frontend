@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect, useContext } from "react";
 import { AuthContext } from './../context/auth.context';
 import apiService from "../services/api.service";
+import { Link } from "react-router-dom";
 
 function Profile() {
   const [showFavs, setShowFavs] = useState([]);
@@ -42,10 +43,12 @@ function Profile() {
       {showFavs.map(fav => {
         return (
           <div key={fav.card._id} className="contImage">
+            <Link to={`/cards/${fav.card._id}`}>
             <div className="isImage">
               <img className="imageCard" src={fav.card.image} alt={fav.card.name} />
               <h3>{fav.card.name}</h3>
             </div>
+          </Link>
           </div>
         )
       })
