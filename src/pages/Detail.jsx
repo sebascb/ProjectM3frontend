@@ -67,7 +67,7 @@ function Detail() {
     <>
       <div>
         <div className='title-detail'>
-          <h2 className='letter-detail'>Pokkemon Detail</h2>
+          <h2 className='letter-detail'>Pokemon Detail</h2>
         </div>
         <div className="detailCont">
           <div>
