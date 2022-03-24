@@ -1,13 +1,16 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { AuthContext } from './../context/auth.context';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import apiService from "../services/api.service";
 
 function Detail() {
   const [detailCard, setDetailCard] = useState({});
+  const [currentUser, setCurrentUser] = useState({});
   const [favorite, setFavorite] = useState(false);
   const { cardId } = useParams();
   const navigate = useNavigate();
+  const { user, isLoading } = useContext(AuthContext);
 
   const getCardDetail = async () => {
     try {
@@ -17,6 +20,16 @@ function Detail() {
       console.log(error)
     }
   };
+
+  const getCurrentUser = () => {
+    if (!isLoading && user) {
+      setCurrentUser(user);
+    }
+  }
+
+  useEffect(() => {
+    getCurrentUser();
+  }, []);
 
   const checkIfFavorite = async () => {
     try {
@@ -80,6 +93,7 @@ function Detail() {
             <p><strong>Attack:</strong> {detailCard.attack}</p>
             <p><strong>HP:</strong> {detailCard.hp}</p>
             <p><strong>Ability:</strong> {detailCard.ability}</p>
+            <p><strong>Creator:</strong> {currentUser.name}</p>
           </div>
         </div>
         <div className='cont-button-detail'>
