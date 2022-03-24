@@ -78,7 +78,7 @@ Card Poke model
 
 ## Backlog
 -  Social Network
--  Meeting point trough the map view
+-  Meeting point through the map view
 
 # Deploy
 https://cranky-lewin-d3d1ec.netlify.app
