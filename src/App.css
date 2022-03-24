@@ -729,7 +729,7 @@ h3 {
   align-items: center;
   flex-direction: column;
   width: 320px;
-  height: 440px;
+  height: 490px;
   border: 2px solid #928f8b;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -770,7 +770,7 @@ h3 {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
   border-bottom: 2px solid #f18546;
   padding-bottom: 10px;
 }
@@ -784,6 +784,11 @@ h3 {
   border-radius: 5px;
   border: 1px solid #e2e5de;
   text-decoration: none;
+}
+
+.heart {
+  margin-top: -2rem;
+  margin-left: 17rem;
 }
 
 /* Create */
@@ -867,7 +872,6 @@ h3 {
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 .contiImage {
@@ -881,10 +885,13 @@ h3 {
   justify-content: center;
   align-items: center;
   letter-spacing: 0.1rem;
-  margin-top: 1rem;
   margin-bottom: 1rem;
   color: #e2e5de;
   gap: 0.5rem;
+}
+
+.pikachu-profile {
+  width: 4rem;
 }
 
 /* Logo spin */

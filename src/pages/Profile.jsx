@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect, useContext } from "react";
 import { AuthContext } from './../context/auth.context';
 import apiService from "../services/api.service";
+import pikachuImg from "./../assets/pikachu.png";
 
 function Profile() {
   const [showFavs, setShowFavs] = useState([]);
@@ -33,6 +34,9 @@ function Profile() {
     <div>
       <div className="title-profile">
         <h2 className="letter-profile">Profile</h2>
+        <div className="alakazam-crt">
+          <img className="pikachu-profile" src={pikachuImg} alt="pikachu image"></img>
+        </div>
       </div>
       <div className="user-profile">
         <p>{currentUser.name}</p>
