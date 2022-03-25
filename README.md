@@ -81,7 +81,7 @@ Card Poke model
 -  Meeting point through the map view
 
 ## Links
-- Backend:https://github.com/sebascb/server-projectM3-jwt
+- Backend: https://github.com/sebascb/server-projectM3-jwt
 - Instructions: https://slides.com/bagaloxley/deck/edit
 - Slides: http://slides.com/sebascorralbrito/deck-4b9ada?ref=share#/0/6
 - Deploy: https://cranky-lewin-d3d1ec.netlify.app
