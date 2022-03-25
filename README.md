@@ -72,7 +72,7 @@ Card Poke model
 | `GET`      | `auth/signup`                       | Renders `signup` options.                                    | 201            | 404          |                        |
 | `GET`      | `auth/signup-user`                  | Renders `signup` form view for user.                         | 201            | 404          |                        |
 | `POST`     | `auth/signup-user`                  | Sends Sign Up info to the server and creates user in the DB  | 201            | 404          | { email, password }    |     
-| `GET`      | `/private/userprofile`              | Shows user profile details with cards                        |                |              |                        |
+| `GET`      | `/private/userprofile`              | Shows user profile details with cards.                       |                |              |                        |
 | `GET`      | `/private/edit-userprofile`         | Private route. Shows`edit-profile user` form                 |                |              |                        |
 <br>
 
