@@ -80,5 +80,7 @@ Card Poke model
 -  Social Network
 -  Meeting point through the map view
 
-# Deploy
-https://cranky-lewin-d3d1ec.netlify.app
+## Links
+- Instructions: https://slides.com/bagaloxley/deck/edit
+- Slides: http://slides.com/sebascorralbrito/deck-4b9ada?ref=share#/0/6
+- Deploy: https://cranky-lewin-d3d1ec.netlify.app
