@@ -41,9 +41,9 @@ $ npm start
 User model
 
 {
-    userName: String,
+    name: String,
     email: String,
-    hashedPassword: String,
+    password: String,
 }
 
 Card Poke model
